@@ -1,5 +1,4 @@
 FROM amazoncorretto:17
-COPY target/demo-app.jar   /usr/app/
+COPY target/*.jar /usr/app/app.jar
 WORKDIR /usr/app/
-EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "demo-app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
